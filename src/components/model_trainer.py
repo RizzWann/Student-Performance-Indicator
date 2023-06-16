@@ -72,7 +72,7 @@ class ModelTrainer:
             best_model = models[best_model_name]
 
             if best_model_score<0.6:
-                raise CustomException("No best model found",sys)
+                raise CustomException("No best model found",sys) # type: ignore
             
             logging.info(f"Best found model on both training and testing dataset")
 
@@ -88,7 +88,7 @@ class ModelTrainer:
             return (best_model_name,best_model_score)
             
         except Exception as e:
-            raise CustomException(e,sys) 
+            raise CustomException(e,sys) # type: ignore
            
     def evaluate_models(self,X_train, y_train,X_test,y_test,models:dict,params:dict):
         try:
@@ -119,4 +119,4 @@ class ModelTrainer:
             return report
 
         except Exception as e:
-            raise CustomException(e, sys)    
+            raise CustomException(e, sys)   # type: ignore 

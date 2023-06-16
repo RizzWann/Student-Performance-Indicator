@@ -3,6 +3,6 @@ numpy
 matplotlib
 seaborn
 scikit-learn
-
+Flask
 
 #-e . # automatically trigger the setup.py
